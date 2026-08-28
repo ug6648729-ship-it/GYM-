@@ -1,1 +1,1251 @@
+/*==================================================
+            FITNESS GYM WEBSITE CSS
+                PART 1
+==================================================*/
 
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==========================
+        RESET
+===========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b0b0b;
+    color:#ffffff;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+section{
+    padding:100px 0;
+}
+
+/*==========================
+      SCROLLBAR
+===========================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff3131;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff0000;
+}
+
+/*==========================
+      COMMON CLASSES
+===========================*/
+
+.section-subtitle{
+
+    color:#ff3131;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:15px;
+
+}
+
+.section-title{
+
+    font-size:48px;
+    font-weight:700;
+    color:#fff;
+    margin-top:15px;
+    margin-bottom:20px;
+
+}
+
+.text-light{
+    color:#c9c9c9 !important;
+}
+
+.btn-danger{
+
+    background:#ff3131;
+    border:none;
+    transition:.4s;
+
+}
+
+.btn-danger:hover{
+
+    background:#d60000;
+    transform:translateY(-3px);
+
+}
+
+.btn-outline-light{
+
+    transition:.4s;
+
+}
+
+.btn-outline-light:hover{
+
+    color:#000;
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+        NAVBAR
+===========================*/
+
+.custom-navbar{
+
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+    padding:15px 0;
+    transition:.4s;
+    z-index:999;
+
+}
+
+.navbar-brand{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.navbar-brand i{
+
+    margin-right:8px;
+
+}
+
+.nav-link{
+
+    color:#fff !important;
+    margin-left:18px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#ff3131 !important;
+
+}
+
+.nav-link.active{
+
+    color:#ff3131 !important;
+
+}
+
+/*==========================
+        HERO SECTION
+===========================*/
+
+.hero-section{
+
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+
+    background:url("../images/hero-bg.jpg") center center/cover no-repeat;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.70);
+
+}
+
+.hero-section .container{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+    background:#ff3131;
+    color:#fff;
+    padding:10px 25px;
+    border-radius:40px;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:600;
+
+}
+
+.hero-section h1{
+
+    font-size:70px;
+    line-height:1.1;
+    font-weight:800;
+    margin-top:25px;
+
+}
+
+.hero-section h1 span{
+
+    color:#ff3131;
+
+}
+
+.hero-section p{
+
+    font-size:18px;
+    color:#d6d6d6;
+    max-width:600px;
+
+}
+
+.hero-features{
+
+    margin-top:30px;
+
+}
+
+.feature{
+
+    margin-bottom:15px;
+    font-size:18px;
+
+}
+
+.feature i{
+
+    margin-right:10px;
+
+}
+
+.hero-image{
+
+    max-width:550px;
+    margin:auto;
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+/*==========================
+        HERO BUTTONS
+===========================*/
+
+.hero-section .btn{
+
+    padding:14px 40px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+/*==========================
+      IMAGE ANIMATION
+===========================*/
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================
+      HERO RESPONSIVE
+===========================*/
+
+@media(max-width:991px){
+
+.hero-section{
+
+text-align:center;
+
+}
+
+.hero-section h1{
+
+font-size:50px;
+
+}
+
+.hero-image{
+
+margin-top:60px;
+max-width:420px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section-title{
+
+font-size:35px;
+
+}
+
+.hero-section{
+
+padding-top:120px;
+
+}
+
+.hero-section h1{
+
+font-size:42px;
+
+}
+
+.hero-section p{
+
+font-size:16px;
+
+}
+
+.hero-tag{
+
+font-size:12px;
+
+}
+
+.feature{
+
+font-size:16px;
+
+}
+
+.hero-section .btn{
+
+display:block;
+width:100%;
+margin-bottom:15px;
+
+}
+
+}
+/*==================================================
+            FITNESS GYM WEBSITE CSS
+                 PART 2
+        ABOUT | WHY US | SERVICES
+==================================================*/
+
+/*==========================
+        ABOUT SECTION
+===========================*/
+
+.about-section{
+    background:#111;
+}
+
+.about-img{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.about-img img{
+    width:100%;
+    border-radius:20px;
+    transition:.5s;
+}
+
+.about-img:hover img{
+    transform:scale(1.08);
+}
+
+.about-box{
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    height:100%;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+    background:#222;
+    box-shadow:0 15px 35px rgba(255,49,49,.25);
+}
+
+.about-box i{
+    font-size:40px;
+    color:#ff3131;
+    margin-bottom:20px;
+}
+
+.about-box h5{
+    color:#fff;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.about-box p{
+    color:#cfcfcf;
+    margin:0;
+    font-size:15px;
+}
+
+.about-section p{
+    color:#d5d5d5;
+    font-size:16px;
+}
+
+/*==========================
+      WHY CHOOSE US
+===========================*/
+
+.why-section{
+    background:#0b0b0b;
+}
+
+.why-card{
+    background:#181818;
+    padding:40px 25px;
+    border-radius:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.05);
+    height:100%;
+}
+
+.why-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(255,49,49,.20);
+    border-color:#ff3131;
+}
+
+.why-card i{
+    font-size:55px;
+    color:#ff3131;
+    margin-bottom:25px;
+}
+
+.why-card h4{
+    color:#fff;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.why-card p{
+    color:#c8c8c8;
+    margin:0;
+}
+
+/*==========================
+        SERVICES
+===========================*/
+
+.services-section{
+    background:#111;
+}
+
+.service-card{
+    background:#1a1a1a;
+    padding:40px 30px;
+    border-radius:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.06);
+    height:100%;
+}
+
+.service-card:hover{
+    transform:translateY(-12px);
+    border-color:#ff3131;
+    box-shadow:0 18px 40px rgba(255,49,49,.25);
+}
+
+.service-card i{
+    width:80px;
+    height:80px;
+    background:#ff3131;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin-bottom:25px;
+    transition:.4s;
+}
+
+.service-card:hover i{
+    transform:rotate(360deg);
+}
+
+.service-card h4{
+    color:#fff;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.service-card p{
+    color:#cfcfcf;
+    margin:0;
+    font-size:15px;
+    line-height:1.8;
+}
+
+/*==========================
+      SECTION SPACING
+===========================*/
+
+.about-section,
+.why-section,
+.services-section{
+    position:relative;
+}
+
+.about-section::before,
+.services-section::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#ff3131;
+    filter:blur(140px);
+    opacity:.12;
+    border-radius:50%;
+}
+
+.about-section::before{
+    top:0;
+    left:0;
+}
+
+.services-section::before{
+    bottom:0;
+    right:0;
+}
+
+/*==========================
+        RESPONSIVE
+===========================*/
+
+@media(max-width:991px){
+
+.about-section,
+.why-section,
+.services-section{
+    text-align:center;
+}
+
+.about-img{
+    margin-bottom:40px;
+}
+
+.service-card,
+.why-card,
+.about-box{
+    margin-bottom:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.section-title{
+    font-size:32px;
+}
+
+.about-box,
+.why-card,
+.service-card{
+    padding:30px 20px;
+}
+
+.about-box i{
+    font-size:34px;
+}
+
+.why-card i{
+    font-size:45px;
+}
+
+.service-card i{
+    width:70px;
+    height:70px;
+    font-size:28px;
+}
+
+}
+/*==================================================
+            FITNESS GYM WEBSITE CSS
+                 PART 3
+ MEMBERSHIP | TRAINERS | BMI | COUNTER | TESTIMONIAL
+==================================================*/
+
+
+/*==========================
+    MEMBERSHIP SECTION
+===========================*/
+
+.membership-section{
+    background:#0f0f0f;
+}
+
+.price-card{
+    background:#1a1a1a;
+    padding:45px 35px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.price-card:hover{
+    transform:translateY(-12px);
+    border-color:#ff3131;
+    box-shadow:0 20px 45px rgba(255,49,49,.25);
+}
+
+.active-plan{
+    border:2px solid #ff3131;
+    transform:scale(1.05);
+}
+
+.active-plan:hover{
+    transform:scale(1.05) translateY(-10px);
+}
+
+.price-card h3{
+    color:#fff;
+    font-weight:700;
+}
+
+.price-card h1{
+    color:#ff3131;
+    font-size:55px;
+    margin:20px 0 5px;
+    font-weight:800;
+}
+
+.price-card span{
+    color:#bdbdbd;
+}
+
+.price-card ul{
+    margin-top:30px;
+}
+
+.price-card ul li{
+    color:#ddd;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.price-card .btn{
+    border-radius:50px;
+    padding:12px;
+}
+
+/*==========================
+      TRAINERS SECTION
+===========================*/
+
+.trainer-section{
+    background:#111;
+}
+
+.trainer-card{
+    background:#1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.trainer-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(255,49,49,.20);
+}
+
+.trainer-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.trainer-card:hover img{
+    transform:scale(1.08);
+}
+
+.trainer-content{
+    padding:25px;
+    text-align:center;
+}
+
+.trainer-content h4{
+    color:#fff;
+    font-weight:700;
+}
+
+.trainer-content p{
+    color:#ff3131;
+    margin-bottom:0;
+}
+
+/*==========================
+      BMI SECTION
+===========================*/
+
+.bmi-section{
+    background:#0b0b0b;
+}
+
+.bmi-box{
+    background:#1a1a1a;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.bmi-box input{
+    background:#252525;
+    border:none;
+    color:#fff;
+    padding:14px;
+}
+
+.bmi-box input:focus{
+    background:#252525;
+    color:#fff;
+    box-shadow:none;
+    border:1px solid #ff3131;
+}
+
+.bmi-box input::placeholder{
+    color:#999;
+}
+
+#result{
+    color:#ff3131;
+    font-weight:700;
+}
+
+/*==========================
+      COUNTER SECTION
+===========================*/
+
+.counter-section{
+    background:#141414;
+}
+
+.counter-box{
+    padding:30px;
+    transition:.4s;
+}
+
+.counter-box:hover{
+    transform:translateY(-8px);
+}
+
+.counter-box h2{
+    font-size:55px;
+    color:#ff3131;
+    font-weight:800;
+}
+
+.counter-box p{
+    color:#d0d0d0;
+    font-size:17px;
+}
+
+/*==========================
+     TESTIMONIAL SECTION
+===========================*/
+
+.testimonial-section{
+    background:#101010;
+}
+
+.testimonial-card{
+    background:#1b1b1b;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.4s;
+    height:100%;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    border-color:#ff3131;
+    box-shadow:0 15px 40px rgba(255,49,49,.20);
+}
+
+.testimonial-card p{
+    color:#d5d5d5;
+    line-height:1.8;
+    margin:20px 0;
+}
+
+.testimonial-card h5{
+    color:#fff;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.testimonial-card i{
+    color:#ff3131;
+}
+
+/*==========================
+     RESPONSIVE
+===========================*/
+
+@media(max-width:991px){
+
+.active-plan{
+    transform:none;
+}
+
+.active-plan:hover{
+    transform:translateY(-10px);
+}
+
+.price-card,
+.trainer-card,
+.testimonial-card{
+    margin-bottom:25px;
+}
+
+.trainer-card img{
+    height:320px;
+}
+
+.counter-box{
+    margin-bottom:25px;
+}
+
+}
+
+@media(max-width:768px){
+
+.price-card{
+    padding:35px 25px;
+}
+
+.price-card h1{
+    font-size:45px;
+}
+
+.counter-box h2{
+    font-size:40px;
+}
+
+.trainer-card img{
+    height:280px;
+}
+
+.bmi-box{
+    margin-top:40px;
+    padding:25px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+            FITNESS GYM WEBSITE CSS
+                PART 4 (FINAL)
+ CONTACT | ADMISSION | MAP | FOOTER | RESPONSIVE
+==================================================*/
+
+/*==========================
+      CONTACT SECTION
+===========================*/
+
+.contact-section{
+    background:#0d0d0d;
+}
+
+.contact-info{
+    background:#1a1a1a;
+    padding:40px;
+    border-radius:20px;
+    height:100%;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-item{
+    align-items:flex-start;
+}
+
+.contact-item i{
+    width:60px;
+    height:60px;
+    background:#ff3131;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.contact-item h5{
+    color:#fff;
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.contact-item p{
+    color:#cfcfcf;
+    margin:0;
+}
+
+/*==========================
+      CONTACT FORM
+===========================*/
+
+.contact-form{
+    background:#1a1a1a;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-form .form-control{
+    background:#242424;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+}
+
+.contact-form .form-control:focus{
+    background:#242424;
+    color:#fff;
+    border:1px solid #ff3131;
+    box-shadow:none;
+}
+
+.contact-form .form-control::placeholder{
+    color:#999;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+/*==========================
+      ADMISSION CTA
+===========================*/
+
+.admission-section{
+    background:linear-gradient(135deg,#ff3131,#b40000);
+}
+
+.admission-section h2{
+    color:#fff;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.admission-section p{
+    color:#f3f3f3;
+    margin:0;
+}
+
+.admission-section .btn{
+    background:#fff;
+    color:#ff3131;
+    border:none;
+    border-radius:50px;
+    padding:14px 35px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.admission-section .btn:hover{
+    background:#111;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/*==========================
+      GOOGLE MAP
+===========================*/
+
+.map-section iframe{
+    display:block;
+    width:100%;
+    border:0;
+    filter:grayscale(100%) contrast(1.1);
+}
+
+/*==========================
+         FOOTER
+===========================*/
+
+.footer{
+    background:#080808;
+}
+
+.footer h3,
+.footer h5{
+    color:#fff;
+    font-weight:700;
+}
+
+.footer p{
+    color:#bdbdbd;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+    color:#cfcfcf;
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+    color:#ff3131;
+    padding-left:8px;
+}
+
+/*==========================
+      SOCIAL ICONS
+===========================*/
+
+.social-icons{
+    display:flex;
+    gap:12px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#1d1d1d;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.35s;
+    font-size:18px;
+}
+
+.social-icons a:hover{
+    background:#ff3131;
+    color:#fff;
+    transform:translateY(-6px) rotate(360deg);
+}
+
+/*==========================
+      FOOTER COPYRIGHT
+===========================*/
+
+.footer hr{
+    border-color:#2f2f2f;
+}
+
+.footer .text-center{
+    color:#999;
+}
+
+/*==========================
+      GENERAL EFFECTS
+===========================*/
+
+.price-card,
+.service-card,
+.about-box,
+.why-card,
+.trainer-card,
+.testimonial-card,
+.contact-form,
+.contact-info{
+    transition:.35s ease;
+}
+
+.section-title{
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#ff3131;
+    display:block;
+    margin-top:15px;
+    border-radius:50px;
+}
+
+.text-center .section-title::after{
+    margin:15px auto 0;
+}
+
+/*==========================
+      RESPONSIVE
+===========================*/
+
+@media (max-width:991px){
+
+.contact-info{
+    margin-bottom:30px;
+}
+
+.admission-section{
+    text-align:center;
+}
+
+.admission-section .btn{
+    margin-top:25px;
+}
+
+.footer{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+}
+
+@media (max-width:768px){
+
+.contact-form,
+.contact-info{
+    padding:25px;
+}
+
+.contact-item i{
+    width:50px;
+    height:50px;
+    font-size:18px;
+}
+
+.footer h3{
+    font-size:28px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+.admission-section h2{
+    font-size:30px;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+}
+
+}
+
+@media (max-width:576px){
+
+.hero-section h1{
+    font-size:36px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.price-card h1{
+    font-size:38px;
+}
+
+.counter-box h2{
+    font-size:34px;
+}
+
+.contact-item{
+    flex-direction:column;
+    text-align:center;
+}
+
+.contact-item i{
+    margin-bottom:15px;
+}
+
+}
+
+/*==========================
+      SELECTION COLOR
+===========================*/
+
+::selection{
+    background:#ff3131;
+    color:#fff;
+}
+
+/*==========================
+         THE END
+===========================*/
